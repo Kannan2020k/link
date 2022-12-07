@@ -173,19 +173,3 @@ async def channel_receive_handler(bot, broadcast):
         await bot.send_message(chat_id=Var.BIN_CHANNEL, text=f"**#ᴇʀʀᴏʀ_ᴛʀᴀᴄᴇʙᴀᴄᴋ:** `{e}`", disable_web_page_preview=True)
         print(f"Cᴀɴ'ᴛ Eᴅɪᴛ Bʀᴏᴀᴅᴄᴀsᴛ Mᴇssᴀɢᴇ!\nEʀʀᴏʀ:  **Give me edit permission in updates and bin Chanell{e}**")
 
-shortz = shortzy.Shortzy(SHORTENER_API, "atglinks.com")
-
-async def get_shortlink(link):
-
-    if SHORTENER_API:
-
-        if LONG_DROPLINK_URL == "True" or LONG_DROPLINK_URL is True:
-
-            return await shortz.get_quick_link(link)
-
-        else:
-
-            return await shortz.convert(link, silently_fail=False)
-
-    return link
-
