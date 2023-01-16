@@ -1,4 +1,4 @@
-FROM python:3.8-slim-buster
+FROM python:2.8-slim-buster
 
 
 
@@ -10,4 +10,4 @@ RUN cd /
 RUN pip3 install -U pip && pip3 install -U -r requirements.txt
 RUN mkdir /EvaMaria
 WORKDIR /EvaMaria
-python3 -m adharsh
+python -m Adarsh
