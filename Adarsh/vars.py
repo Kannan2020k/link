@@ -9,34 +9,32 @@ load_dotenv()
 
 class Var(object):
     MULTI_CLIENT = False
-    API_ID = int(getenv('API_ID',"4682685"))
-    API_HASH = str(getenv('API_HASH',"3eba5d471162181b8a3f7f5c0a23c307"))
-    BOT_TOKEN = str(getenv('BOT_TOKEN',"5544919313:AAGKLmMJvI0Gn6ZMyUYVIS1JPH8daIoPs3g"))
-    name = str(getenv('SESSION_NAME', 'filetolinkbot'))
+    API_ID = int(getenv('API_ID'))
+    API_HASH = str(getenv('API_HASH'))
+    BOT_TOKEN = str(getenv('BOT_TOKEN'))
+    name = str(getenv('name', 'filetolinkbot'))
     SLEEP_THRESHOLD = int(getenv('SLEEP_THRESHOLD', '60'))
     WORKERS = int(getenv('WORKERS', '4'))
-    BIN_CHANNEL = int(getenv('BIN_CHANNEL','-1001539366814'))
-    PORT = int(getenv('PORT', 8000))
+    BIN_CHANNEL = int(getenv('BIN_CHANNEL'))
+    PORT = int(getenv('PORT', 8080))
     BIND_ADRESS = str(getenv('WEB_SERVER_BIND_ADDRESS', '0.0.0.0'))
     PING_INTERVAL = int(environ.get("PING_INTERVAL", "1200"))  # 20 minutes
-    OWNER_ID = set(int(x) for x in os.environ.get("OWNER_ID", "945284066").split())  
+    OWNER_ID = set(int(x) for x in os.environ.get("OWNER_ID", "").split())  
     NO_PORT = bool(getenv('NO_PORT', False))
-    APP_NAME = str(getenv('APP_NAME','unfortunate-malissa-aakash2021-cap.koyeb.app')) #@fligher
-    OWNER_USERNAME = str(getenv('OWNER_USERNAME',"FLIGHER"))
+    APP_NAME = None
+    OWNER_USERNAME = str(getenv('OWNER_USERNAME'))
     if 'DYNO' in environ:
         ON_HEROKU = True
-        APP_NAME = str(getenv('APP_NAME',"filetolinktb")) #
+        APP_NAME = str(getenv('APP_NAME'))
     
     else:
-    ON_HEROKU = False 
-    
-    FQDN = str(getenv('FQDN',BIND_ADRESS)) if not ON_HEROKU or getenv(FQDN) else APP_NAME + "koyeb.app"
-    FQDN = str(getenv('FQDN',APP_NAME))
+        ON_HEROKU = False
+    FQDN = str(getenv('FQDN', BIND_ADRESS)) if not ON_HEROKU or getenv('FQDN') else APP_NAME+'.herokuapp.com'
     HAS_SSL=bool(getenv('HAS_SSL',False))
     if HAS_SSL:
         URL = "https://{}/".format(FQDN)
     else:
         URL = "http://{}/".format(FQDN)
-    DATABASE_URL = str(getenv('DATABASE_URL',"mongodb+srv://twobot:cbot22@cluster0.tbf5o.mongodb.net/?retryWrites=true&w=majority"))
-    UPDATES_CHANNEL = str(getenv('UPDATES_CHANNEL', "redirect_to_lion_stage"))
+    DATABASE_URL = str(getenv('DATABASE_URL'))
+    UPDATES_CHANNEL = str(getenv('UPDATES_CHANNEL', None))
     BANNED_CHANNELS = list(set(int(x) for x in str(getenv("BANNED_CHANNELS", "-1001362659779")).split())) 
