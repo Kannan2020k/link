@@ -23,14 +23,14 @@ class Var(object):
     NO_PORT = bool(getenv('NO_PORT', False))
     APP_NAME = str(getenv('APP_NAME','unfortunate-malissa-aakash2021-cap.koyeb.app')) #@fligher
     OWNER_USERNAME = str(getenv('OWNER_USERNAME',"FLIGHER"))
-   # if 'DYNO' in environ:
-       # ON_HEROKU = True
-       # APP_NAME = str(getenv('APP_NAME',"filetolinktb")) #
+    if 'DYNO' in environ:
+        ON_HEROKU = True
+        APP_NAME = str(getenv('APP_NAME',"filetolinktb")) #
     
-  #  else:
+    else:
     ON_HEROKU = False 
     
-    #FQDN = str(getenv('FQDN',BIND_ADRESS)) if not ON_HEROKU or getenv(FQDN) else APP_NAME + "koyeb.app"
+    FQDN = str(getenv('FQDN',BIND_ADRESS)) if not ON_HEROKU or getenv(FQDN) else APP_NAME + "koyeb.app"
     FQDN = str(getenv('FQDN',APP_NAME))
     HAS_SSL=bool(getenv('HAS_SSL',False))
     if HAS_SSL:
