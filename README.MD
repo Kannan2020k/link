@@ -166,3 +166,11 @@ Bot also Supported with Channels. Just add bot Channel as Admin. If any new file
 
 <b>ᴅᴇᴠᴇʟᴏᴘᴇʀ ›› [ᴀᴀᴅʜɪ](https://telegram.dog/AboutAadhi) | [ɪɴsᴛᴀɢʀᴀᴍ](https://www.instagram.com/aadhi.xr/) | [ɢɪᴛʜᴜʙ](https://GitHub.com/Aadhi000)</b>                                                                                                                                                                                    
 <b>ᴄʜᴀɴɴᴇʟ ›› [ᴍᴡ ᴜᴘᴅᴀᴛᴇᴢ](https://t.me/MWUpdatez)</b>
+
+### Deploy on Render
+
+Press the button and make ytml folder and deploy on Render
+
+<a href="https://render.com/deploy?repo=https://github.com/LieStage/link">
+<img src="https://render.com/images/deploy-to-render-button.svg" alt="Deploy to Render">
+</a>
