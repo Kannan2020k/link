@@ -21,6 +21,8 @@ class Var(object):
     PING_INTERVAL = int(environ.get("PING_INTERVAL", "1200"))  # 20 minutes
     OWNER_ID = set(int(x) for x in os.environ.get("OWNER_ID", "").split())  
     NO_PORT = bool(getenv('NO_PORT', False))
+    SHORTENER_API = str(getenv("SHORTENER_API", None))
+    LONG_DROPLINK_URL = str(get("LONG_DROPLINK_URL", False))
     APP_NAME = None
     OWNER_USERNAME = str(getenv('OWNER_USERNAME'))
     if 'DYNO' in environ:
@@ -38,5 +40,3 @@ class Var(object):
     DATABASE_URL = str(getenv('DATABASE_URL'))
     UPDATES_CHANNEL = str(getenv('UPDATES_CHANNEL', None))
     BANNED_CHANNELS = list(set(int(x) for x in str(getenv("BANNED_CHANNELS", "-1001362659779")).split())) 
-SHORTENER_API = str(getenv("SHORTENER_API", None))
-LONG_DROPLINK_URL = str(get("LONG_DROPLINK_URL", False))
