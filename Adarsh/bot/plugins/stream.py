@@ -97,9 +97,14 @@ async def private_receive_handler(c: Client, m: Message):
 
         log_msg = await m.forward(chat_id=Var.BIN_CHANNEL)
         stream_link = f"{Var.URL}watch/{str(log_msg.id)}/{quote_plus(get_name(log_msg))}?hash={get_hash(log_msg)}"
-        
+        shortlink = get_shortlink(stream_link) 
+        if shortlink:
+            stream_link = shortlink
         online_link = f"{Var.URL}{str(log_msg.id)}/{quote_plus(get_name(log_msg))}?hash={get_hash(log_msg)}"
-        
+        shortlinka = get_shortlink(online_link)
+        if shortlinka:
+            online_link = shortlinka
+
         photo_xr="https://telegra.ph/file/808cbe30cb464ff57e0a1.jpg"
         
         
