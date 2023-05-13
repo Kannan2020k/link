@@ -42,7 +42,7 @@ class Var(object):
 
 
 
-    FQDN = str(getenv('FQDN',BIND_ADRESS)) if not ON_HEROKU or getenv(FQDN) else APP_NAME + "render.com"
+    FQDN = str(getenv('FQDN',BIND_ADRESS)) or getenv(FQDN) else APP_NAME + "render.com"
 
     FQDN = str(getenv('FQDN',APP_NAME))
 
