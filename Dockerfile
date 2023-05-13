@@ -22,4 +22,4 @@ WORKDIR /EvaMaria
 #COPY start.sh /start.sh
 
 
-CMD ["python3","-m","Adarsh"]
+CMD ["python","-m","Adarsh"]
