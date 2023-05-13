@@ -39,14 +39,23 @@ class Var(object):
     APP_NAME = str(getenv('APP_NAME','filetolinktb.onrender.com')) #@fligher
 
     OWNER_USERNAME = str(getenv('OWNER_USERNAME',"FLIGHER"))
+    if 'DYNO' in environ:
+
+        ON_HEROKU = True
+
+        APP_NAME = str(getenv('APP_NAME',"filetolinktb")) #
+
+    else:
+
+        ON_HEROKU = False 
+
+        FQDN = str(getenv('FQDN',BIND_ADRESS)) if not ON_HEROKU or getenv(FQDN) else APP_NAME + "render.com"
+
+        FQDN = str(getenv('FQDN',APP_NAME))
+
+    HAS_SSL=bool(getenv('HAS_SSL',False))
 
 
-
-    #FQDN = str(getenv('FQDN',BIND_ADRESS)) or getenv(FQDN) else APP_NAME + "render.com"
-
-    FQDN = str(getenv('FQDN',APP_NAME))
-
-    HAS_SSL=bool(getenv('HAS_SSL',True))
 
     if HAS_SSL:
 
