@@ -2,7 +2,7 @@
 import os
 import asyncio
 import requests
-import shortzy
+
 from asyncio import TimeoutError
 from Adarsh.bot import StreamBot
 from Adarsh.utils.database import Database
@@ -97,13 +97,9 @@ async def private_receive_handler(c: Client, m: Message):
 
         log_msg = await m.forward(chat_id=Var.BIN_CHANNEL)
         stream_link = f"{Var.URL}watch/{str(log_msg.id)}/{quote_plus(get_name(log_msg))}?hash={get_hash(log_msg)}"
-        shortlink = get_shortlink(stream_link) 
-        if shortlink:
-            stream_link = shortlink
+        
         online_link = f"{Var.URL}{str(log_msg.id)}/{quote_plus(get_name(log_msg))}?hash={get_hash(log_msg)}"
-        shortlinka = get_shortlink(online_link)
-        if shortlinka:
-            online_link = shortlinka
+        
 
         photo_xr="https://telegra.ph/file/808cbe30cb464ff57e0a1.jpg"
         
@@ -180,11 +176,4 @@ async def channel_receive_handler(bot, broadcast):
         await bot.send_message(chat_id=Var.BIN_CHANNEL, text=f"**#ᴇʀʀᴏʀ_ᴛʀᴀᴄᴇʙᴀᴄᴋ:** `{e}`", disable_web_page_preview=True)
         print(f"Cᴀɴ'ᴛ Eᴅɪᴛ Bʀᴏᴀᴅᴄᴀsᴛ Mᴇssᴀɢᴇ!\nEʀʀᴏʀ:  **Give me edit permission in updates and bin Chanell{e}**")
 
-shortz = shortzy.Shortzy(SHORTENER_API, "shorturllink.in")
-async def get_shortlink(online_link):
-    if SHORTENER_API:
-        if LONG_DROPLINK_URL == "True" or LONG_DROPLINK_URL is True:
-            return await shortz.get_quick_link(online_link)
-        else:
-            return await shortz.convert(online_link, silently_fail=False)
-    return link
+
