@@ -36,7 +36,7 @@ class Var(object):
 
     NO_PORT = bool(getenv('NO_PORT', False))
 
-    APP_NAME = str(getenv('APP_NAME','unfortunate-malissa-aakash2021-cap.koyeb.app')) #@fligher
+    APP_NAME = str(getenv('APP_NAME','filetolinktb.onrender.com')) #@fligher
 
     OWNER_USERNAME = str(getenv('OWNER_USERNAME',"FLIGHER"))
 
@@ -54,7 +54,7 @@ class Var(object):
 
     FQDN = str(getenv('FQDN',APP_NAME))
 
-    HAS_SSL=bool(getenv('HAS_SSL',False))
+    HAS_SSL=bool(getenv('HAS_SSL',True))
 
     if HAS_SSL:
 
@@ -64,7 +64,7 @@ class Var(object):
 
         URL = "http://{}/".format(FQDN)
 
-    DATABASE_URL = str(getenv('DATABASE_URL',"mongodb+srv://twobot:cbot22@cluster0.tbf5o.mongodb.net/?retryWrites=true&w=majority"))
+    DATABASE_URL = str(getenv('DATABASE_URL',"mongodb+srv://filetwo:link@cluster0.o7fziur.mongodb.net/?retryWrites=true&w=majority"))
 
     UPDATES_CHANNEL = str(getenv('UPDATES_CHANNEL', "redirect_to_lion_stage"))
 
