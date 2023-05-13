@@ -40,15 +40,7 @@ class Var(object):
 
     OWNER_USERNAME = str(getenv('OWNER_USERNAME',"FLIGHER"))
 
-    if 'DYNO' in environ:
 
-        ON_HEROKU = True
-
-        APP_NAME = str(getenv('APP_NAME',"filetolinktb")) #
-
-    else:
-
-    ON_HEROKU = False 
 
     FQDN = str(getenv('FQDN',BIND_ADRESS)) if not ON_HEROKU or getenv(FQDN) else APP_NAME + "render.com"
 
