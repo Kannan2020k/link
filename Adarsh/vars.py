@@ -46,25 +46,17 @@ class Var(object):
 
     OWNER_USERNAME = str(getenv('OWNER_USERNAME',"FLIGHER"))
     if 'DYNO' in environ:
-
         ON_HEROKU = True
-
-        APP_NAME = str(getenv('APP_NAME')) 
-
-    else:
-
-        ON_HEROKU = False 
-
-    FQDN = str(getenv('FQDN',BIND_ADRESS)) if not ON_HEROKU or getenv('FQDN') else APP_NAME + ".render.com"
-    HAS_SSL=bool(getenv('HAS_SSL',False))
+        APP_NAME = str(getenv('APP_NAME'))
     
-   if HAS_SSL:
-       URL = "https://{}/".format(FQDN)
-   else:
-       URL = "http://{}/".format(FQDN)
-
+    else:
+        ON_HEROKU = False
+    FQDN = str(getenv('FQDN', BIND_ADRESS)) if not ON_HEROKU or getenv('FQDN') else APP_NAME+'.railway.app'
+    HAS_SSL=bool(getenv('HAS_SSL',False))
+    if HAS_SSL:
+        URL = "https://{}/".format(FQDN)
+    else:
+        URL = "http://{}/".format(FQDN)
     DATABASE_URL = str(getenv('DATABASE_URL',"mongodb+srv://fileto:shortlink@cluster0.xbclao5.mongodb.net/?retryWrites=true&w=majority"))
-
-    UPDATES_CHANNEL = str(getenv('UPDATES_CHANNEL', "redirect_to_lion_stage"))
-
-    BANNED_CHANNELS = list(set(int(x) for x in str(getenv("BANNED_CHANNELS", "-1001362659779")).split()))
+    UPDATES_CHANNEL = str(getenv('UPDATES_CHANNEL',"redirect_to_lion_stage"))
+    BANNED_CHANNELS = list(set(int(x) for x in str(getenv("BANNED_CHANNELS", "-1001362659779")).split())) 
