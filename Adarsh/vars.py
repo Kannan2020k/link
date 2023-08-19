@@ -55,11 +55,11 @@ class Var(object):
 
         ON_HEROKU = False 
 
-        FQDN = str(getenv('FQDN',BIND_ADRESS)) if not ON_HEROKU or getenv(FQDN) else APP_NAME + "render.com"
+     FQDN = str(getenv('FQDN',BIND_ADRESS)) if not ON_HEROKU or getenv('FQDN') else APP_NAME + "render.com"
 
-        FQDN = str(getenv('FQDN',APP_NAME))
+     #FQDN = str(getenv('FQDN',APP_NAME))
 
-    HAS_SSL=bool(getenv('HAS_SSL',False))
+     HAS_SSL=bool(getenv('HAS_SSL',False))
 
 
 
