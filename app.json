@@ -23,32 +23,32 @@
           "value": "True"
       },
       "APP_NAME": {
-          "description": "Copy-Paste the app name that you just typed above."
+          "description": "Copy-Paste the app name that you just typed above.",
            "required": false
       },
       "API_ID": {
-          "description": "Get this value from https://my.telegram.org"
+          "description": "Get this value from https://my.telegram.org",
           "required": false
       },
       "API_HASH": {
-          "description": "Get this value from https://my.telegram.org"
+          "description": "Get this value from https://my.telegram.org",
           "required": false
       },
       "BOT_TOKEN": {
-          "description": "Get this value from @BotFather"
+          "description": "Get this value from @BotFather",
           "required": false
       },
       "BIN_CHANNEL": {
-          "description": "The BIN Channel ID. Read the readme for more info about this var"
+          "description": "The BIN Channel ID. Read the readme for more info about this var",
           "required": false
           
       },
       "DATABASE_URL": {
-          "description": "MongoDB URI for saving User IDs when they first Start the Bot. We will use that for Broadcasting to them. I will try to add more features related with Database. If you need help search for a tutorial on youtbe"
+          "description": "MongoDB URI for saving User IDs when they first Start the Bot. We will use that for Broadcasting to them. I will try to add more features related with Database. If you need help search for a tutorial on youtbe",
           "required": false
       },
       "OWNER_ID": {
-          "description": "Your Telegram User ID  like 1234509"
+          "description": "Your Telegram User ID  like 1234509",
           "required": false
       },
       "BANNED_CHANNELS": {
@@ -62,7 +62,7 @@
           
       },
       "OWNER_USERNAME": {
-          "description": "Enter your username without @  example  adarsh."
+          "description": "Enter your username without @  example  adarsh.",
           "required": false
       },
       "SLEEP_THRESHOLD": {
