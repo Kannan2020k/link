@@ -1,7 +1,7 @@
 import re
 import os
 import asyncio
-from .vars import Var
+from ..vars import Var
 shortz = shortzy.Shortzy(SHORTENER_API, "dtglinks.in")
 async def get_shortlink(link):
     if SHORTENER_API:
