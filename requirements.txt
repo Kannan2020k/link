@@ -9,5 +9,4 @@ apscheduler
 requests
 psutil
 pyromod
-aiohttp
 shortzy
