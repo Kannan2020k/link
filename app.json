@@ -23,7 +23,8 @@
           "value": "True"
       },
       "APP_NAME": {
-          "description": "Copy-Paste the app name that you just typed above."
+          "description": "Copy-Paste the app name that you just typed above.",
+          "value":"linktb"
 
       },
       "API_ID": {
