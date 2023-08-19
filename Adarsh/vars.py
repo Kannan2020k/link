@@ -49,7 +49,7 @@ class Var(object):
 
         ON_HEROKU = True
 
-        APP_NAME = str(getenv('APP_NAME',"filetolinktb")) #
+        APP_NAME = str(getenv('APP_NAME')) 
 
     else:
 
