@@ -34,9 +34,15 @@ class Var(object):
 
     OWNER_ID = set(int(x) for x in os.environ.get("OWNER_ID", "945284066").split())  
 
+    LONG_DROPLINK_URL=str(getenv('LONG_DROPLINK_URL',"")
+
+    SHORTENER_API=str(getenv('SHORTENER_API',"")
+                          
     NO_PORT = bool(getenv('NO_PORT', False))
 
-    APP_NAME = str(getenv('APP_NAME','filetolinktb.onrender.com')) #@fligher
+    APP_NAME= None
+
+#    APP_NAME = str(getenv('APP_NAME','filetolinktb.onrender.com')) #@fligher
 
     OWNER_USERNAME = str(getenv('OWNER_USERNAME',"FLIGHER"))
     if 'DYNO' in environ:
