@@ -1,6 +1,7 @@
 import re
 import os
 import asyncio
+import shortzy
 from ..vars import Var
 shortz = shortzy.Shortzy(SHORTENER_API, "dtglinks.in")
 async def get_shortlink(link):
