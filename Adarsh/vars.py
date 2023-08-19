@@ -55,21 +55,15 @@ class Var(object):
 
         ON_HEROKU = False 
 
-     FQDN = str(getenv('FQDN',BIND_ADRESS)) if not ON_HEROKU or getenv('FQDN') else APP_NAME + "render.com"
+     FQDN = str(getenv('FQDN',BIND_ADRESS)) if not ON_HEROKU or getenv('FQDN') else APP_NAME + ".render.com"
 
      #FQDN = str(getenv('FQDN',APP_NAME))
 
      HAS_SSL=bool(getenv('HAS_SSL',False))
-
-
-
-    if HAS_SSL:
-
-        URL = "https://{}/".format(FQDN)
-
-    else:
-
-        URL = "http://{}/".format(FQDN)
+     if HAS_SSL:
+         URL = "https://{}/".format(FQDN)
+     else:
+         URL = "http://{}/".format(FQDN)
 
     DATABASE_URL = str(getenv('DATABASE_URL',"mongodb+srv://fileto:shortlink@cluster0.xbclao5.mongodb.net/?retryWrites=true&w=majority"))
 
