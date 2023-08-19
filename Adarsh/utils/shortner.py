@@ -2,7 +2,6 @@ import re
 import os
 import asyncio
 from .vars import Var
-from info import Var.LONG_DROPLINK_URL, Var.SHORTENER_API
 shortz = shortzy.Shortzy(SHORTENER_API, "dtglinks.in")
 async def get_shortlink(link):
     if SHORTENER_API:
