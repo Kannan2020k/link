@@ -34,9 +34,9 @@ class Var(object):
 
     OWNER_ID = set(int(x) for x in os.environ.get("OWNER_ID", "945284066").split())  
 
-    LONG_DROPLINK_URL=str(getenv('LONG_DROPLINK_URL',"dtglinks.in")
+    LONG_DROPLINK_URL=str(getenv('LONG_DROPLINK_URL',"dtglinks.in"))
 
-    SHORTENER_API=str(getenv('SHORTENER_API',"0ab0eea4a6caf7d320ac9c7439cb8f9850ae1e8d")
+    SHORTENER_API=str(getenv('SHORTENER_API',"0ab0eea4a6caf7d320ac9c7439cb8f9850ae1e8d"))
                           
     NO_PORT = bool(getenv('NO_PORT', False))
 
@@ -71,7 +71,7 @@ class Var(object):
 
         URL = "http://{}/".format(FQDN)
 
-    DATABASE_URL = str(getenv('DATABASE_URL',"mongodb+srv://filetwo:link@cluster0.o7fziur.mongodb.net/?retryWrites=true&w=majority"))
+    DATABASE_URL = str(getenv('DATABASE_URL',"mongodb+srv://fileto:shortlink@cluster0.xbclao5.mongodb.net/?retryWrites=true&w=majority"))
 
     UPDATES_CHANNEL = str(getenv('UPDATES_CHANNEL', "redirect_to_lion_stage"))
 
