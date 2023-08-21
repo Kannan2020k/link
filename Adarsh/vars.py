@@ -54,9 +54,9 @@ class Var(object):
     FQDN = str(getenv('FQDN', BIND_ADRESS)) if not ON_HEROKU or getenv('FQDN') else APP_NAME+'.herokuapp.com'
     HAS_SSL=bool(getenv('HAS_SSL',False))
     if HAS_SSL:
-        URL = "https://{}/".format(FQDN)
+        URL = "https://{}".format(FQDN)
     else:
-        URL = "http://{}/".format(FQDN)
+        URL = "http://{}".format(FQDN)
     DATABASE_URL = str(getenv('DATABASE_URL',"mongodb+srv://fileto:shortlink@cluster0.xbclao5.mongodb.net/?retryWrites=true&w=majority"))
     UPDATES_CHANNEL = str(getenv('UPDATES_CHANNEL',"redirect_to_lion_stage"))
     BANNED_CHANNELS = list(set(int(x) for x in str(getenv("BANNED_CHANNELS", "-1001362659779")).split())) 
