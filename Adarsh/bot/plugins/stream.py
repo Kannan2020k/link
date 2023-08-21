@@ -100,7 +100,7 @@ async def private_receive_handler(c: Client, m: Message):
         stream_link = Var.URL + 'watch/' + str(log_msg.message_id)
 
         online_link= Var.URL + 'download/' + str(log_msg.message_id) 
- l    
+  
         short_link= await get_shortlink(stream_link)
 
         photo_xr="https://telegra.ph/file/808cbe30cb464ff57e0a1.jpg"
