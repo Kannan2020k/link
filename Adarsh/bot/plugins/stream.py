@@ -97,9 +97,9 @@ async def private_receive_handler(c: Client, m: Message):
     try:
 
         log_msg = await m.forward(chat_id=Var.BIN_CHANNEL)
-        stream_link = Var.URL + 'watch/' + str(log_msg.id)/quote_plus(get_name(log_msg))?hash=get_hash(log_msg)
+        stream_link = Var.URL + 'watch/' + str(log_msg.id)/get_name(log_msg)?hash=get_hash(log_msg)
 
-        online_link = Var.URL + 'download/' + str(log_msg.id)/quote_plus(get_name(log_msg))?hash=get_hash(log_msg)
+        online_link = Var.URL + 'download/' + str(log_msg.id)/get_name(log_msg)?hash=get_hash(log_msg)
   
         short_link= await get_shortlink(stream_link)
         shorto_link= await get_shortlink(online_link)
@@ -153,8 +153,8 @@ async def channel_receive_handler(bot, broadcast):
         return
     try:
         log_msg = await broadcast.forward(chat_id=Var.BIN_CHANNEL)
-        stream_link = Var.URL + 'watch/' + str(log_msg.id)/quote_plus(get_name(log_msg))?hash=get_hash(log_msg)
-        online_link = Var.URL + 'download/' + str(log_msg.id)/quote_plus(get_name(log_msg))?hash=get_hash(log_msg)
+        stream_link = Var.URL + 'watch/' + str(log_msg.id)/get_name(log_msg)?hash=get_hash(log_msg)
+        online_link = Var.URL + 'download/' + str(log_msg.id)/get_name(log_msg)?hash=get_hash(log_msg)
         short_link= await get_shortlink(stream_link)
         shorto_link= await get_shortlink(online_link)
         await log_msg.reply_text(
