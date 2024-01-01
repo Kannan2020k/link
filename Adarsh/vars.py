@@ -18,7 +18,7 @@ class Var(object):
 
     BOT_TOKEN = str(getenv('BOT_TOKEN',"5544919313:AAGInu1jJdrdiNRjDNh2hqk1akzPNu5rfiI"))
 
-    name = str(getenv('SESSION_NAME', 'filetolinkbot'))
+    SESSION_NAME = str(getenv('SESSION_NAME', 'filetolinkbot'))
 
     SLEEP_THRESHOLD = int(getenv('SLEEP_THRESHOLD', '60'))
 
