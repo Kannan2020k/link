@@ -1,7 +1,7 @@
 # (c) adarsh-goel
 import os
 from os import getenv, environ
-from dotenv import load_dotenv
+from dotenv import load_dotenv 
 
 
 
@@ -18,7 +18,7 @@ class Var(object):
 
     BOT_TOKEN = str(getenv('BOT_TOKEN',"5544919313:AAGInu1jJdrdiNRjDNh2hqk1akzPNu5rfiI"))
 
-    SESSION_NAME = str(getenv('SESSION_NAME', 'filetolinkbot'))
+    name = str(getenv('SESSION_NAME', 'filetolinkbot'))
 
     SLEEP_THRESHOLD = int(getenv('SLEEP_THRESHOLD', '60'))
 
