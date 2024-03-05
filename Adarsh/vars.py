@@ -40,7 +40,7 @@ class Var(object):
                           
     NO_PORT = bool(getenv('NO_PORT', False))
 
-    APP_NAME= None
+    APP_NAME= str(getenv('APP_NAME','fastlink-39f7f5a4099e'))
 
 #    APP_NAME = str(getenv('APP_NAME','filetolinktb.onrender.com')) #@fligher
 
