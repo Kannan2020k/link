@@ -12,11 +12,11 @@ class Var(object):
 
     MULTI_CLIENT = False
 
-    API_ID = int(getenv('API_ID',"4682685"))
+    API_ID = int(getenv('API_ID',"26872474"))
 
-    API_HASH = str(getenv('API_HASH',"3eba5d471162181b8a3f7f5c0a23c307"))
+    API_HASH = str(getenv('API_HASH',"f8d3a289bf28a13a7159ad0b2ed114e7"))
 
-    BOT_TOKEN = str(getenv('BOT_TOKEN',"5544919313:AAGInu1jJdrdiNRjDNh2hqk1akzPNu5rfiI"))
+    BOT_TOKEN = str(getenv('BOT_TOKEN',"6166862817:AAGoryxbujDDODRLrCTO7hJV153fdqbgE2c"))
 
     SESSION_NAME = str(getenv('SESSION_NAME', 'filetolinkbot'))
 
@@ -24,7 +24,7 @@ class Var(object):
 
     WORKERS = int(getenv('WORKERS', '4'))
 
-    BIN_CHANNEL = int(getenv('BIN_CHANNEL','-1001539366814'))
+    BIN_CHANNEL = int(getenv('BIN_CHANNEL','-1001850979293'))
 
     PORT = int(getenv('PORT', 8000))
 
@@ -32,7 +32,7 @@ class Var(object):
 
     PING_INTERVAL = int(environ.get("PING_INTERVAL", "1200"))  # 20 minutes
 
-    OWNER_ID = set(int(x) for x in os.environ.get("OWNER_ID", "945284066").split())  
+    OWNER_ID = set(int(x) for x in os.environ.get("OWNER_ID", "5211097531").split())  
 
     LONG_DROPLINK_URL=str(getenv('LONG_DROPLINK_URL',"paisakamalo.in"))
 
@@ -44,7 +44,7 @@ class Var(object):
 
 #    APP_NAME = str(getenv('APP_NAME','filetolinktb.onrender.com')) #@fligher
 
-    OWNER_USERNAME = str(getenv('OWNER_USERNAME',"FLIGHER"))
+    OWNER_USERNAME = str(getenv('OWNER_USERNAME',"RBEagle2k"))
     if 'DYNO' in environ:
         ON_HEROKU = True
         APP_NAME = str(getenv('APP_NAME'))
@@ -57,6 +57,6 @@ class Var(object):
         URL = "https://{}/".format(FQDN)
     else:
         URL = "http://{}/".format(FQDN)
-    DATABASE_URL = str(getenv('DATABASE_URL',"mongodb+srv://fileto:shortner@cluster0.biy9fre.mongodb.net/?retryWrites=true&w=majority"))
-    UPDATES_CHANNEL = str(getenv('UPDATES_CHANNEL',"redirect_to_lion_stage"))
-    BANNED_CHANNELS = list(set(int(x) for x in str(getenv("BANNED_CHANNELS", "-1001362659779")).split())) 
+    DATABASE_URL = str(getenv('DATABASE_URL',"mongodb+srv://Karnan2k:karnan2k@cluster0.guq8k77.mongodb.net/?retryWrites=true&w=majority"))
+    UPDATES_CHANNEL = str(getenv('UPDATES_CHANNEL',"MainChannal2k"))
+    BANNED_CHANNELS = list(set(int(x) for x in str(getenv("BANNED_CHANNELS", "-1001850979293")).split())) 
