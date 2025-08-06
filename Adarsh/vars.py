@@ -34,9 +34,9 @@ class Var(object):
 
     OWNER_ID = set(int(x) for x in os.environ.get("OWNER_ID", "5211097531").split())  
 
-    LONG_DROPLINK_URL=str(getenv('LONG_DROPLINK_URL',"paisakamalo.in"))
+    LONG_DROPLINK_URL=str(getenv('LONG_DROPLINK_URL',"krownlinks.com"))
 
-    SHORTENER_API=str(getenv('SHORTENER_API',"9d7e32c571c44b3ee91a814fa25c31e0211f5aeb"))
+    SHORTENER_API=str(getenv('SHORTENER_API',"78ee1a8ae63094a94a0ab8b5d529b4ef5def22f5"))
                           
     NO_PORT = bool(getenv('NO_PORT', False))
 
